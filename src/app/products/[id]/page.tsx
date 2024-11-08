@@ -1,4 +1,3 @@
-// app/products/[id]/page.tsx
 import React from 'react';
 
 async function fetchProduct(id: string) {
