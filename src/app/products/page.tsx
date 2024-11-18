@@ -2,9 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 
 async function fetchProducts() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    const res = await fetch(`${process.env.API_URL}/posts`, {
         next: { revalidate: 30 },
     });
+
     return res.json();
 }
 
